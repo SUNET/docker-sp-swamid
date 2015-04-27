@@ -136,4 +136,26 @@
     <Attribute name="urn:oid:2.5.4.11" id="ou"/>
     <Attribute name="urn:oid:2.5.4.15" id="businessCategory"/>
     <Attribute name="urn:oid:2.5.4.19" id="physicalDeliveryOfficeName"/>
+
+    <Attribute name="urn:mace:dir:attribute-def:norEduPersonLegalName" id="norEduPersonLegalName"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduPersonNIN" id="norEduPersonNIN"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduPersonLIN" id="norEduPersonLIN"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduOrgAcronym" id="norEduOrgAcronym"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduPersonBirthDate" id="norEduPersonBirthDate"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduOrgUniqueIdentifier" id="norEduOrgUniqueIdentifier"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduOrgUnitUniqueIdentifier" id="norEduOrgUnitUniqueIdentifier"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduOrgNIN" id="norEduOrgNIN"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduOrgUniqueNumber" id="norEduOrgUniqueNumber"/>
+    <Attribute name="urn:mace:dir:attribute-def:norEduOrgUnitUniqueNumber" id="norEduOrgUnitUniqueNumber"/>
+ 
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.10" id="norEduPersonLegalName"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.5" id="norEduPersonNIN"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.4" id="norEduPersonLIN"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.6" id="norEduOrgAcronym"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.3" id="norEduPersonBirthDate"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.7" id="norEduOrgUniqueIdentifier"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.8" id="norEduOrgUnitUniqueIdentifier"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.12" id="norEduOrgNIN"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.1" id="norEduOrgUniqueNumber"/>
+    <Attribute name="urn:oid:1.3.6.1.4.1.2428.90.1.2" id="norEduOrgUnitUniqueNumber"/>
 </Attributes>
