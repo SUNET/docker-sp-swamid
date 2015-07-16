@@ -122,7 +122,7 @@ body {
                     Dessa inloggningsalternativ är bara avsedda för tester och riktar sig till expertanvändare.
                  </div>
                  <ul class="list-unstyled">
-                    <li><a href="/Shibboleth.sso/Login?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">SWAMID</a></li>
+                    <li><a href="/Shibboleth.sso/DS/nordu.net?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">SWAMID</a></li>
                     <li><a href="/Shibboleth.sso/DS/swamid-test?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">SWAMID Testing</a></li>
                     <li><a href="/Shibboleth.sso/DS/skolfederation?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">Skolfederation</a></li>
                     <li><a href="/Shibboleth.sso/DS/kalmar2?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">Kalmar2</a></li>
