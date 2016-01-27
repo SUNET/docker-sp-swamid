@@ -21,6 +21,7 @@ ADD certs/ /etc/shibboleth/
 ADD attribute-map.xml /etc/shibboleth/attribute-map.xml
 ADD secure /var/www/secure
 RUN chmod a+rx /var/www/secure/index.cgi
+COPY /apache2.conf /etc/apache2/
 ADD shibd.logger /etc/shibboleth/shibd.logger
 ADD index.php /var/www/
 EXPOSE 443
