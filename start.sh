@@ -277,7 +277,7 @@ EOF
 
 adduser -- _shibd ssl-cert
 mkdir -p /var/log/shibboleth
-mkdir -p /var/log/apache2
+mkdir -p /var/log/apache2 /var/lock/apache2
 
 echo "----"
 cat /etc/shibboleth/shibboleth2.xml
@@ -289,5 +289,6 @@ a2ensite default
 a2ensite default-ssl
 
 service shibd start
-service apache2 start
-tail -f /var/log/apache2/error.log
+rm -f /var/run/apache2/apache2.pid
+
+env APACHE_LOCK_DIR=/var/lock/apache2 APACHE_RUN_DIR=/var/run/apache2 APACHE_PID_FILE=/var/run/apache2/apache2.pid APACHE_RUN_USER=www-data APACHE_RUN_GROUP=www-data APACHE_LOG_DIR=/var/log/apache2 apache2 -DFOREGROUND
