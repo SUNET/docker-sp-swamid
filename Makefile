@@ -1,9 +1,12 @@
-all: build tag push
-update:
-	docker build -t sp-swamid .
+VERSION=latest
+NAME=sp-swamid
+
+all: build push
 build:
-	docker build --no-cache=true -t sp-swamid .
-tag:
-	docker tag -f sp-swamid docker.sunet.se/sp-swamid
+	docker build --no-cache=true -t $(NAME):$(VERSION) .
+	docker tag -f $(NAME):$(VERSION) docker.sunet.se/$(NAME):$(VERSION)
+update:
+	docker build -t $(NAME):$(VERSION) .
+	docker tag -f $(NAME):$(VERSION) docker.sunet.se/$(NAME):$(VERSION)
 push:
-	docker push docker.sunet.se/sp-swamid	
+	docker push docker.sunet.se/$(NAME):$(VERSION)
