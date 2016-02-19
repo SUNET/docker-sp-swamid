@@ -54,6 +54,7 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
     xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
     xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"    
     xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+    logger="shibboleth/syslog.logger"
     clockSkew="180">
 
     <ApplicationDefaults entityID="https://${SP_HOSTNAME}/shibboleth"
@@ -191,7 +192,7 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
            <SignatureMetadataFilter certificate="md-signer.crt"/>
         </MetadataProvider>
 
-        <MetadataProvider type="XML" uri="https://trial.skolfederation.se/md/metadata.xml"
+        <MetadataProvider type="XML" uri=" https://fed.skolfederation.se/trial/md/skolfederation-trial-3_0.xml"
             backingFilePath="skolfederation-trial.xml" reloadInterval="300">
             <SignatureMetadataFilter certificate="skolfederation-trial.crt"/>
         </MetadataProvider>
