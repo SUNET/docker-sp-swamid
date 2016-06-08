@@ -131,7 +131,7 @@ body {
                     <li><a href="/Shibboleth.sso/Login/box-idp.nordu.net?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">NORDUnet Box gw</a></li>
                     <li><a href="/Shibboleth.sso/Login/openidp?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">FEIDE openidp</a></li>
                     <li><a href="/Shibboleth.sso/DS/loopback?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">Loopback DS (testing)</a></li>
-                    <li><a href="/Shibboleth.sso/DS/pyff-test.nordu.net?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">pyFF nightly DS</a></li>
+                    <li><a href="/Shibboleth.sso/DS/nightly.pyff.io?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">pyFF nightly DS</a></li>
                     <li><a href="/Shibboleth.sso/Login/eduid-dev?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">eduID (dev)</a></li>
                     <li><a href="/Shibboleth.sso/Login/eduid?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">eduID</a></li>
                     <li><a href="/Shibboleth.sso/Login/unitedid?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">UnitedID</a></li>

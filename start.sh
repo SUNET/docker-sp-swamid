@@ -123,9 +123,9 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://kalmar2.org/simplesaml/module.php/discopower/disco.php"/>
             </SessionInitiator>
 
-            <SessionInitiator type="Chaining" Location="/DS/pyff-test.nordu.net" id="pyff-test" relayState="cookie">
+            <SessionInitiator type="Chaining" Location="/DS/nightly.pyff.io" id="pyff-test" relayState="cookie">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
-                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://pyff-test.nordu.net/role/idp.ds"/>
+                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://nightly.pyff.io/role/idp.ds"/>
             </SessionInitiator>
 
             <SessionInitiator type="Chaining" Location="/DS/md.nordu.net" id="md.nordu.net" relayState="cookie">
@@ -197,11 +197,6 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
             <SignatureMetadataFilter certificate="skolfederation-trial.crt"/>
         </MetadataProvider>
 
-        <MetadataProvider type="XML" uri="http://md.nordu.net/role/idp.xml"
-            backingFilePath="md.nordu.net.xml" reloadInterval="300">
-            <SignatureMetadataFilter certificate="md.nordu.net.crt"/>
-        </MetadataProvider>
- 
         <MetadataProvider type="XML" uri="http://md.unitedid.org/idp.xml"
             backingFilePath="unitedid.xml" reloadInterval="300">
         </MetadataProvider>
