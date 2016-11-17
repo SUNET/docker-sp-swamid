@@ -1,2 +1,3 @@
+docker_name: sp-swamid
 triggers:
     cron: @daily
