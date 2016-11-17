@@ -47,6 +47,12 @@ elif [ -f "$KEYDIR/certs/chain.pem" ]; then
    CHAINSPEC="SSLCertificateChainFile $KEYDIR/certs/chain.pem"
 fi
 
+cat>/etc/apache2/conf-available/acme.conf<<EOF
+ProxyPass /.well-known/acme-challenge http://acme-c.sunet.se/.well-known/acme-challenge/
+ProxyPassReverse /.well-known/acme-challenge http://acme-c.sunet.se/.well-known/acme-challenge/
+EOF
+
+a2enconf acme
 
 cat>/etc/shibboleth/shibboleth2.xml<<EOF
 <SPConfig xmlns="urn:mace:shibboleth:2.0:native:sp:config"
