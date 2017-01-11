@@ -178,24 +178,24 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
             helpLocation="${SP_ABOUT}"
             styleSheet="/shibboleth-sp/main.css"/>
 
-        <MetadataProvider type="XML" uri="http://md.swamid.se/md/swamid-idp-transitive.xml"
+        <MetadataProvider type="XML" uri="http://mds.swamid.se/md/swamid-idp-transitive.xml"
            backingFilePath="swamid-1.0.xml" reloadInterval="300">
-           <SignatureMetadataFilter certificate="md-signer.crt"/>
+           <SignatureMetadataFilter certificate="md-signer2.crt"/>
         </MetadataProvider>
 
-        <MetadataProvider type="XML" uri="http://md.swamid.se/md/swamid-testing-1.0.xml"
+        <MetadataProvider type="XML" uri="http://mds.swamid.se/md/swamid-testing-1.0.xml"
            backingFilePath="swamid-testing-1.0.xml" reloadInterval="300">
-           <SignatureMetadataFilter certificate="md-signer.crt"/>
+           <SignatureMetadataFilter certificate="md-signer2.crt"/>
         </MetadataProvider>
 
-        <MetadataProvider type="XML" uri="http://md.swamid.se/md/swamid-fiv-test.xml"
+        <MetadataProvider type="XML" uri="http://mds.swamid.se/md/swamid-fiv-test.xml"
            backingFilePath="swamid-fiv-test.xml" reloadInterval="300">
-           <SignatureMetadataFilter certificate="md-signer.crt"/>
+           <SignatureMetadataFilter certificate="md-signer2.crt"/>
         </MetadataProvider>
 
-        <MetadataProvider type="XML" uri="http://md.swamid.se/md/swamid-ki-sll-1.0.xml"
+        <MetadataProvider type="XML" uri="http://mds.swamid.se/md/swamid-ki-sll-1.0.xml"
            backingFilePath="swamid-ki-sll-1.0.xml" reloadInterval="300">
-           <SignatureMetadataFilter certificate="md-signer.crt"/>
+           <SignatureMetadataFilter certificate="md-signer2.crt"/>
         </MetadataProvider>
 
         <MetadataProvider type="XML" uri=" https://fed.skolfederation.se/trial/md/skolfederation-trial-3_0.xml"

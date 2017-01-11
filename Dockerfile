@@ -8,7 +8,7 @@ RUN a2enmod rewrite ssl shib2 headers cgi proxy proxy_http
 ENV SP_HOSTNAME sp.example.com
 ENV SP_CONTACT noc@nordu.net
 ENV SP_ABOUT /
-ENV METADATA_SIGNER md-signer.crt
+ENV METADATA_SIGNER md-signer2.crt
 ENV DEFAULT_LOGIN md.nordu.net
 RUN rm -f /etc/apache2/sites-available/*
 RUN rm -f /etc/apache2/sites-enabled/*
