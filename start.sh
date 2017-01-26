@@ -139,6 +139,16 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://md.nordu.net/role/idp.ds"/>
             </SessionInitiator>
 
+            <SessionInitiator type="Chaining" Location="/DS/legacy1" id="ds.sunet.se" relayState="cookie">
+                <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
+                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://ds.sunet.se/discovery/DS"/>
+            </SessionInitiator>
+
+            <SessionInitiator type="Chaining" Location="/DS/legacy2" id="ds.swamid.se" relayState="cookie">
+                <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
+                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://ds.swamid.se/discovery/DS"/>
+            </SessionInitiator>
+
             <SessionInitiator type="Chaining" Location="/DS/swamid-test" id="ds-test" relayState="cookie">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://ds-test.swamid.se/role/idp.ds"/>
