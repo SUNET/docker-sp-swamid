@@ -1,5 +1,5 @@
 VERSION=latest
-NAME=rt-swamid
+NAME=sp-swamid
 
 all: build push
 build:
