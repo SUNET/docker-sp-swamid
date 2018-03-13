@@ -14,7 +14,7 @@ if [ "x${SP_ABOUT}" = "x" ]; then
    SP_ABOUT="/about"
 fi
 
-if ["x${DEFAULT_LOGIN}" = "x" ]; then
+if [ "x${DEFAULT_LOGIN}" = "x" ]; then
    DEFAULT_LOGIN="md.nordu.net" 
 fi
 
