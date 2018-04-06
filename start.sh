@@ -286,6 +286,7 @@ EOF
 adduser -- _shibd ssl-cert
 mkdir -p /var/log/shibboleth
 mkdir -p /var/log/apache2 /var/lock/apache2
+chown _shibd /var/cache/shibboleth
 
 echo "----"
 cat /etc/shibboleth/shibboleth2.xml
