@@ -14,7 +14,7 @@ if [ "x${SP_ABOUT}" = "x" ]; then
    SP_ABOUT="/about"
 fi
 
-if ["x${DEFAULT_LOGIN}" = "x" ]; then
+if [ "x${DEFAULT_LOGIN}" = "x" ]; then
    DEFAULT_LOGIN="md.nordu.net" 
 fi
 
@@ -267,6 +267,12 @@ ServerName ${SP_HOSTNAME}
         ServerName ${SP_HOSTNAME}
         ServerAdmin noc@nordu.net
 
+        <IfModule mod_headers.c>
+           Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains; preload"
+           Header always set X-Frame-Options "SAMEORIGIN"
+           Header always set X-XSS-Protection "1; mode=block"
+        </IfModule>
+
         AddDefaultCharset utf-8
 
         ErrorLog /var/log/apache2/error.log
@@ -290,6 +296,7 @@ EOF
 adduser -- _shibd ssl-cert
 mkdir -p /var/log/shibboleth
 mkdir -p /var/log/apache2 /var/lock/apache2
+chown _shibd /var/cache/shibboleth
 
 echo "----"
 cat /etc/shibboleth/shibboleth2.xml
