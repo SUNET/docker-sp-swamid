@@ -85,12 +85,6 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
                 <SessionInitiator type="SAMLDS" URL="http://md.nordu.net/role/idp.ds"/>
             </SessionInitiator>
 
-            <SessionInitiator type="Chaining" Location="/DS/kalmar2" id="kalmar2.org" relayState="cookie">
-                <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
-                <SessionInitiator type="Shib1" defaultACSIndex="5"/>
-                <SessionInitiator type="SAMLDS" URL="https://kalmar2.org/simplesaml/module.php/discopower/disco.php"/>
-            </SessionInitiator>
- 
             <SessionInitiator type="Chaining" Location="/Login/feide" id="idp.feide.no" relayState="cookie" entityID="https://idp.feide.no">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
             </SessionInitiator>
@@ -125,10 +119,6 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://ds.skolfederation.se"/>
             </SessionInitiator>
 
-            <SessionInitiator type="Chaining" Location="/DS/kalmar2" id="kalmar2" relayState="cookie">
-                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://kalmar2.org/simplesaml/module.php/discopower/disco.php"/>
-            </SessionInitiator>
-
             <SessionInitiator type="Chaining" Location="/DS/nightly.pyff.io" id="pyff-test" relayState="cookie">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://nightly.pyff.io/role/idp.ds"/>
@@ -161,6 +151,11 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
 
             <SessionInitiator type="Chaining" Location="/Login/box-idp.sunet.se" id="box-idp.sunet.se"
                         entityID="https://box-idp.sunet.se/simplesaml/saml2/idp/metadata.php" relayState="cookie">
+                <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
+            </SessionInitiator>
+
+            <SessionInitiator type="Chaining" Location="/Login/skolfed-trial" id="skolfed-trial"
+                        entityID="urn:se:skolfederation:trial:idp:1:0:0" relayState="cookie">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
             </SessionInitiator>
 
@@ -208,9 +203,14 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
            <SignatureMetadataFilter certificate="md-signer2.crt"/>
         </MetadataProvider>
 
-        <MetadataProvider type="XML" uri=" https://fed.skolfederation.se/trial/md/skolfederation-trial-3_0.xml"
+        <MetadataProvider type="XML" uri="https://fed.skolfederation.se/trial/md/skolfederation-trial-3_0.xml"
             backingFilePath="skolfederation-trial.xml" reloadInterval="300">
             <SignatureMetadataFilter certificate="skolfederation-trial.crt"/>
+        </MetadataProvider>
+
+        <MetadataProvider type="XML" uri="https://md.fidus.skolverket.se/test/entities/"
+            backingFilePath="fidus-test.xml" reloadInterval="300">
+            <SignatureMetadataFilter certificate="fidus-test.crt"/>
         </MetadataProvider>
 
         <MetadataProvider type="XML" uri="http://md.unitedid.org/idp.xml"

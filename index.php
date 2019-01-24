@@ -137,6 +137,7 @@ body {
                     <li><a href="/Shibboleth.sso/Login/unitedid?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">UnitedID</a></li>
                     <li><a href="/Shibboleth.sso/DS/legacy1?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">SUNET legacy DS</a></li>
                     <li><a href="/Shibboleth.sso/DS/legacy2?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">SWAMID legacy DS</a></li>
+                    <li><a href="/Shibboleth.sso/Login/skolfed-trial?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">skolfederation trial idp</a></li>
                  </ul>
               </div>
            </div>
