@@ -307,6 +307,10 @@ cat /etc/apache2/sites-available/default-ssl.conf
 a2ensite default
 a2ensite default-ssl
 
+if [ "${FILESENDER}" = "true" ]; then
+  a2enmod proxy_fcgi
+fi
+
 service shibd start
 rm -f /var/run/apache2/apache2.pid
 
