@@ -4,7 +4,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN apt-get -q update
 RUN apt-get -y upgrade
 RUN apt-get -y install apache2 libapache2-mod-shib2 ssl-cert augeas-tools libapache2-mod-php libcgi-pm-perl libemail-mime-encodings-perl php-htmlpurifier
-RUN a2enmod rewrite ssl shib2 headers cgi proxy proxy_http
+RUN a2enmod rewrite ssl shib headers cgi proxy proxy_http
 ENV SP_HOSTNAME sp.example.com
 ENV SP_CONTACT noc@nordu.net
 ENV SP_ABOUT /
