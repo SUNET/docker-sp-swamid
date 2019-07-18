@@ -144,6 +144,11 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://ds-test.swamid.se/role/idp.ds"/>
             </SessionInitiator>
 
+            <SessionInitiator type="Chaining" Location="/DS/thiss.io" id="thiss.io" relayState="cookie">
+                <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
+                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://use.thiss.io/ds/"/>
+            </SessionInitiator>
+
             <SessionInitiator type="Chaining" Location="/DS/loopback" id="loopback" relayState="cookie">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://localhost:8080/role/idp.ds"/>
