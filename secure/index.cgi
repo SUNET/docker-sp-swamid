@@ -6,7 +6,7 @@
 use MIME::Base64;
 use CGI qw/:standard *table *td *tr *ul/;
 use utf8;
-use encoding 'utf8';
+#use encoding 'utf8';
 
 print header(-type=>'text/html',-charset=>'utf-8'),
       start_html(-title=>'SWAMID Test SP',
