@@ -149,6 +149,11 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://use.thiss.io/ds/"/>
             </SessionInitiator>
 
+            <SessionInitiator type="Chaining" Location="/DS/fidus" id="thiss.io" relayState="cookie">
+                <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
+                <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="https://ds.fidus.skolverket.se/ds/"/>
+            </SessionInitiator>
+
             <SessionInitiator type="Chaining" Location="/DS/loopback" id="loopback" relayState="cookie">
                 <SessionInitiator type="SAML2" defaultACSIndex="1" acsByIndex="false" template="bindingTemplate.html"/>
                 <SessionInitiator type="SAMLDS" defaultACSIndex="5" URL="http://localhost:8080/role/idp.ds"/>
@@ -216,6 +221,11 @@ cat>/etc/shibboleth/shibboleth2.xml<<EOF
         <MetadataProvider type="XML" uri="https://md.fidus.skolverket.se/test/entities/"
             backingFilePath="fidus-test.xml" reloadInterval="300">
             <SignatureMetadataFilter certificate="fidus-test.crt"/>
+        </MetadataProvider>
+
+        <MetadataProvider type="XML" uri="https://md.fidus.skolverket.se/entities/"
+            backingFilePath="fidus-test.xml" reloadInterval="300">
+            <SignatureMetadataFilter certificate="fidus.crt"/>
         </MetadataProvider>
 
         <MetadataProvider type="XML" uri="http://md.unitedid.org/idp.xml"

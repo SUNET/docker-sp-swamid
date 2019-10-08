@@ -139,6 +139,7 @@ body {
                     <li><a href="/Shibboleth.sso/DS/legacy2?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">SWAMID legacy DS</a></li>
                     <li><a href="/Shibboleth.sso/Login/skolfed-trial?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">skolfederation trial idp</a></li>
                     <li><a href="/Shibboleth.sso/DS/thiss.io?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">thiss.io DS</a></li>
+                    <li><a href="/Shibboleth.sso/DS/fidus?target=https://<?php echo $_SERVER['SERVER_NAME']?>/secure/">fidus DS</a></li>
                  </ul>
               </div>
            </div>
